@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/map"
+        android:icon="@drawable/map_lcon"
+        android:title="Map" />
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/user_lcon"
+        android:title="Profile" />
+    <item
+        android:id="@+id/store"
+        android:icon="@drawable/shop_icon"
+        android:title="Store" />
+
+</menu>
