@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "719882220394",
+    "project_id": "cn-ubi-bike2023-91f30",
+    "storage_bucket": "cn-ubi-bike2023-91f30.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:719882220394:android:52339f43a14f1320452b13",
+        "android_client_info": {
+          "package_name": "com.example.ubi_bike"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "719882220394-9m4v4d5mcp6faf5556m188vql5g0hjo8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjnEvrupA20Px130wgfcoNRp9SD3X_z4o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "719882220394-9m4v4d5mcp6faf5556m188vql5g0hjo8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
