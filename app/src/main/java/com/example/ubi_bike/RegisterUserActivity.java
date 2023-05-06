@@ -72,6 +72,7 @@ public class RegisterUserActivity extends AppCompatActivity {
                 user.put("email", email.getText().toString());
                 user.put("biekid", bike.getText().toString());
                 user.put("birth", date);
+                user.put("points","0");
 
                 mAuth.createUserWithEmailAndPassword(email.getText().toString(), pass.getText().toString())
                         .addOnCompleteListener(RegisterUserActivity.this, new OnCompleteListener<AuthResult>() {
