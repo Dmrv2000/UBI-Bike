@@ -21,7 +21,8 @@ import java.util.Comparator;
 
 public class StoreFragment extends Fragment {
 
-    public StoreFragment(){
+    public
+    StoreFragment(){
         // require a empty public constructor
     }
 
@@ -30,37 +31,34 @@ public class StoreFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_store, container, false);
 
-        // Initialize Firestore
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-        // Retrieve products from Firestore
         db.collection("store").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                 productList = new ArrayList<>();
                 for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
-                    //Product product = documentSnapshot.toObject(Product.class);
-                    Product product = new Product(documentSnapshot.getString("amount"),documentSnapshot.getString("value"),documentSnapshot.getId());
+                    Product product = new Product(documentSnapshot.getString("amount"), documentSnapshot.getString("price"),documentSnapshot.getId());
                     productList.add(product);
-                    //Log.d("Taf",documentSnapshot.getString("amount"));
                 }
 
-                Collections.sort(productList, new Comparator<Product>() {
+                productList.sort(new Comparator<Product>() {
                     @Override
                     public int compare(Product o1, Product o2) {
-                        return Integer.compare(Integer.valueOf(o1.getValue()), Integer.valueOf(o2.getValue()));
+                        return Integer.compare(Integer.parseInt(o1.getPrice()), Integer.parseInt(o2.getPrice()));
                     }
                 });
 
                 // Create and set adapter for RecyclerView
-                productRecyclerView = container.findViewById(R.id.achievmets);
+                productRecyclerView = container.findViewById(R.id.storeFragment);
                 productRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-                ProductListAdapter productListAdapter = new ProductListAdapter(productList);
-                productRecyclerView.setAdapter(productListAdapter);
+                ProductListAdapter listaProdutosAdapter = new ProductListAdapter(productList);
+                productRecyclerView.setAdapter(listaProdutosAdapter);
             }
         });
 
-        return inflater.inflate(R.layout.fragment_store, container, false);
+        return view;
     }
 }

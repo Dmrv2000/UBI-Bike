@@ -2,4 +2,22 @@
     <string name="app_name">UBI-Bike</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ubi_bike">UBI-Bike</string>
+    <string name="username">Nome de utilizador</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Esqueceu-se da password?</string>
+    <string name="email">Email</string>
+    <string name="bike_id">ID Bike</string>
+    <string name="repeat_password">Confirmar password</string>
+    <string name="register">Registar</string>
+    <string name="data_de_nascimento">Data de nascimento</string>
+    <string name="map">Map</string>
+    <string name="profile">Profile</string>
+    <string name="store">Store</string>
+    <string name="menu">Menu</string>
+    <string name="logout">Logout</string>
+    <string name="textview">A aplicação UBI-Bike permite aos utilizadores utilizar as bicicletas eléctricas para juntar pontos que podem depois " +
+                "ser trocados por produtos disponíveis numa loja da UBI. Esta plataforma permite visualizar, adicionar e remover produtos disponíveis, " +
+                "é também possível gerir os achievements, ver pedidos e visualizar os utilizadores registados na aplicação.</string>
 </resources>

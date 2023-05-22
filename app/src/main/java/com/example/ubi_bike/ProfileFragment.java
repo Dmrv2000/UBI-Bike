@@ -15,10 +15,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
-import java.io.*;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 
 public class ProfileFragment extends Fragment {
 
@@ -26,8 +23,8 @@ public class ProfileFragment extends Fragment {
         // require a empty public constructor
     }
 
-    private ArrayList<Achievment> achievmentsList;
-    private RecyclerView achievmentRecyclerView;
+    private ArrayList<Achievement> achievementsList;
+    private RecyclerView achievementRecyclerView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -39,20 +36,17 @@ public class ProfileFragment extends Fragment {
         db.collection("achievments").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                achievmentsList = new ArrayList<>();
+                achievementsList = new ArrayList<>();
                 for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
-                    //Product product = documentSnapshot.toObject(Product.class);
-                    Achievment achievment = new Achievment(documentSnapshot.getId(),documentSnapshot.getString("description"));
-                    achievmentsList.add(achievment);
-                    //Log.d("Taf",documentSnapshot.getString("amount"));
+                    Achievement achievement = new Achievement(documentSnapshot.getId(), documentSnapshot.getString("description"), documentSnapshot.getString("points"));
+                    achievementsList.add(achievement);
                 }
 
-
                 // Create and set adapter for RecyclerView
-                achievmentRecyclerView = container.findViewById(R.id.achievmets);
-                achievmentRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-                AchievmentListAdapter achievmentListAdapter = new AchievmentListAdapter(achievmentsList);
-                achievmentRecyclerView.setAdapter(achievmentListAdapter);
+                achievementRecyclerView = container.findViewById(R.id.achievmets);
+                achievementRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+                AchievementListAdapter achievementListAdapter = new AchievementListAdapter(achievementsList);
+                achievementRecyclerView.setAdapter(achievementListAdapter);
             }
         });
 

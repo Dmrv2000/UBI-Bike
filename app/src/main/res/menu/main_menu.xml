@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/paginainicial"
+        android:checked="true"
+        android:title="Página Inicial" />
+
+    <item
+        android:id="@+id/loja"
+        android:title="Loja" />
+
+    <item
+        android:id="@+id/pedidos"
+        android:title="Pedidos" />
+
+    <item
+        android:id="@+id/achievements"
+        android:title="Achievements" />
+
+    <item
+        android:id="@+id/utilizadores"
+        android:title="Utilizadores" />
+
+    <item
+        android:id="@+id/terminar_sessao"
+        android:title="Terminar Sessão" />
+</menu>

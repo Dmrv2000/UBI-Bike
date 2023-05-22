@@ -1,0 +1,68 @@
+<!-- dialog_add_product.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/nome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome" />
+
+    <EditText
+        android:id="@+id/textoNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome do Item" />
+
+    <TextView
+        android:id="@+id/quantidade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quantidade" />
+
+    <EditText
+        android:id="@+id/textoQuantidade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Quantidade do Item" />
+
+    <TextView
+        android:id="@+id/preco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Preço" />
+
+    <EditText
+        android:id="@+id/textoPreco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="Preço do Item" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <Button
+            android:id="@+id/botaoCancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3sp"
+            android:text="Cancelar" />
+
+        <Button
+            android:id="@+id/botaoConfirmar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8sp"
+            android:text="Confirmar" />
+
+    </LinearLayout>
+
+</LinearLayout>

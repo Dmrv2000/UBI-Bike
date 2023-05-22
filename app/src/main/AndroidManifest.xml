@@ -16,6 +16,12 @@
             android:name=".HomeUserActivity"
             android:exported="false" />
         <activity
+            android:name=".HomeAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AchivementsFragmentAdmin"
+            android:exported="false" />
+        <activity
             android:name=".RegisterUserActivity"
             android:exported="false" />
         <activity

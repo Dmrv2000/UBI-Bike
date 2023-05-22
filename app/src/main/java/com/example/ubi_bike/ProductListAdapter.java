@@ -3,7 +3,6 @@ package com.example.ubi_bike;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -13,7 +12,7 @@ import java.util.List;
 
 public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.ProductViewHolder> {
 
-    private List<Product> productList;
+    private final List<Product> productList;
 
     public ProductListAdapter(List<Product> productList) {
         this.productList = productList;
@@ -22,7 +21,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
     @NonNull
     @Override
     public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.product_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.product_view, parent, false);
         return new ProductViewHolder(view);
     }
 
@@ -30,8 +29,8 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
     public void onBindViewHolder(@NonNull ProductViewHolder holder, int position) {
         Product product = productList.get(position);
         holder.productNameTextView.setText(product.getName());
-        holder.productAmount.setText("Amount Available: "+product.getAmountAvailable());
-        holder.productValue.setText("Value: "+product.getValue());
+        holder.productAmount.setText("Amount Available: "+ product.getAmountAvailable());
+        holder.productValue.setText("Price: "+ product.getPrice());
     }
 
     @Override

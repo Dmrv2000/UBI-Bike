@@ -2,14 +2,14 @@
     <item
         android:id="@+id/map"
         android:icon="@drawable/map_lcon"
-        android:title="Map" />
+        android:title="@string/map" />
     <item
         android:id="@+id/profile"
         android:icon="@drawable/user_lcon"
-        android:title="Profile" />
+        android:title="@string/profile" />
     <item
         android:id="@+id/store"
         android:icon="@drawable/shop_icon"
-        android:title="Store" />
+        android:title="@string/store" />
 
 </menu>

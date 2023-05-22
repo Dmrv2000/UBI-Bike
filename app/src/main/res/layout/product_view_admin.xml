@@ -50,7 +50,48 @@
                 android:textStyle="bold"
                 tools:text="50" />
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="30dp"
+                android:layout_height="24dp"
+                android:background="@drawable/border"
+                android:layout_marginStart="8dp">
+
+                <ImageView
+                    android:id="@+id/plusButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_plus"
+                    app:tint="#00FF00"
+                    android:contentDescription="Plus Button"
+                    android:onClick="openQuantityDialog"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="30dp"
+                android:layout_height="24dp"
+                android:background="@drawable/border"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:id="@+id/crossButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_cross"
+                    app:tint="#FF0000"
+                    android:contentDescription="Cross Button" />
+
+            </FrameLayout>
 
         </LinearLayout>
+
     </LinearLayout>
 </androidx.cardview.widget.CardView>

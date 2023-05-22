@@ -1,0 +1,108 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8sp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:text="Name: " />
+
+    <TextView
+        android:id="@+id/textoNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8sp"
+        android:textSize="18sp"
+        android:hint="Nome" />
+
+    <TextView
+        android:id="@+id/emailTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8sp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:text="Email: " />
+
+    <TextView
+        android:id="@+id/textoEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8sp"
+        android:textSize="18sp"
+        android:hint="Email" />
+
+    <TextView
+        android:id="@+id/dataTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8sp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:text="Data: " />
+
+    <TextView
+        android:id="@+id/textoData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8sp"
+        android:textSize="18sp"
+        android:hint="Data" />
+
+    <TextView
+        android:id="@+id/distanceTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8sp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:text="Distância percorrida: " />
+
+    <TextView
+        android:id="@+id/textoDistancia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8sp"
+        android:textSize="18sp"
+        android:hint="Distância" />
+
+    <TextView
+        android:id="@+id/idBikeTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8sp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:text="ID da bicicleta: " />
+
+    <TextView
+        android:id="@+id/textoIdBike"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8sp"
+        android:textSize="18sp"
+        android:hint="ID Bike" />
+
+    <TextView
+        android:id="@+id/pointsTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8sp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:text="Pontos: " />
+
+    <TextView
+        android:id="@+id/textoPontos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8sp"
+        android:textSize="18sp"
+        android:text="Points" />
+
+</LinearLayout>
