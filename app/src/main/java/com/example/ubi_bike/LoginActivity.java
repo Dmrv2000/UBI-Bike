@@ -4,8 +4,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -95,11 +97,23 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void checkUserAccessLevel(String uid){
+        SharedPreferences sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("userID", uid);
+        editor.apply();
         DocumentReference df = fStore.collection("users").document(uid);
         df.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 if(Objects.equals(documentSnapshot.getString("admin"), "0")){
+                    SharedPreferences sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    Log.d("Uname",documentSnapshot.getString("username"));
+                    editor.putString("username", documentSnapshot.getString("username"));
+                    editor.putString("email", documentSnapshot.getString("email"));
+                    editor.putString("points", String.valueOf(documentSnapshot.getLong("points")));
+                    editor.putString("bikeid", String.valueOf(documentSnapshot.getLong("bikeid")));
+                    editor.apply();
                     startActivity(new Intent(getApplicationContext(), HomeUserActivity.class));
                     finish();
                 } else  {
